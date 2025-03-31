@@ -2,6 +2,7 @@ build:
 	./build.sh
 
 render-start:
+	pip list
 	gunicorn task_manager.wsgi
 
 install:
