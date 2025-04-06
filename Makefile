@@ -5,7 +5,7 @@ render-start:
 	gunicorn task_manager.wsgi
 
 install:
-	uv sync
+	$HOME/.local/bin/uv sync
 
 collectstatic:
 	python3 manage.py collectstatic --noinput
