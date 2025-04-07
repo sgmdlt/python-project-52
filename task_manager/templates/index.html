@@ -1,1 +1,8 @@
-<h1>Hello, {{ who }}!</h1>
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load django_bootstrap5 %}
+
+{% block title %}
+    {% translate 'Task Manager' %}
+{% endblock %}
