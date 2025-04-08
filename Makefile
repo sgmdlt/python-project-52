@@ -2,10 +2,10 @@ build:
 	./build.sh
 
 render-start:
-	PATH=$$HOME/.cargo/bin:$$PATH gunicorn task_manager.wsgi:application
+	PATH=/opt/render/.local/bin:$$PATH gunicorn task_manager.wsgi:application
 
 install:
-	uv sync
+	PATH=/opt/render/.local/bin:$$PATH uv sync
 
 collectstatic:
 	python3 manage.py collectstatic --noinput
