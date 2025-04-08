@@ -2,7 +2,7 @@ build:
 	./build.sh
 
 render-start:
-	python3 -m gunicorn task_manager.wsgi:application
+	PATH=$$HOME/.cargo/bin:$$PATH gunicorn task_manager.wsgi:application
 
 install:
 	uv sync
