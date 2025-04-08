@@ -2,7 +2,7 @@ build:
 	./build.sh
 
 render-start:
-	PATH=/opt/render/.local/bin:$$PATH python3 -m gunicorn task_manager.wsgi:application
+	/opt/render/.local/bin/python3 -m gunicorn task_manager.wsgi:application
 
 install:
 	PATH=/opt/render/.local/bin:$$PATH uv sync
