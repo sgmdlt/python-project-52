@@ -2,10 +2,10 @@ build:
 	./build.sh
 
 render-start:
-	/opt/render/.local/bin/python3 -m gunicorn task_manager.wsgi:application
+	.venv/bin/python -m gunicorn --chdir hexlet-code task_manager.wsgi
 
 install:
-	PATH=/opt/render/.local/bin:$$PATH uv sync
+	uv sync
 
 collectstatic:
 	python3 manage.py collectstatic --noinput
